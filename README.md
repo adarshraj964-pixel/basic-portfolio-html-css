@@ -8,8 +8,8 @@ This project showcases interactive UI design, smooth animations, and glassmorphi
 
 ---
 
-## 🌐 Live Demo
-(After enabling GitHub Pages, paste your website link here)
+<img width="1890" height="844" alt="image" src="https://github.com/user-attachments/assets/23ef71f3-835c-4695-8669-1069f8698756" />
+
 
 ---
 
