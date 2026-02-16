@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #1d2671, #c33764, #0f2027, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.typing {
+    height: 40px;
+    margin-bottom: 20px;
+    color: #00f7ff;
+}
+
+.about {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* Mirror Buttons */
+.mirror-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.4s;
+}
+
+.mirror-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* Skills */
+.skills {
+    margin-top: 40px;
+}
+
+.skill {
+    margin: 15px auto;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.bar {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 12px;
+    border-radius: 20px;
+    animation: fill 2s forwards;
+}
+
+.c { width: 85%; background: #00f7ff; }
+.python { width: 80%; background: #ffcc00; }
+.html { width: 90%; background: #ff4b2b; }
+.js { width: 70%; background: #00ff88; }
+.mysql { width: 60%; background: #9b59b6; }
+
+@keyframes fill {
+    from { width: 0; }
+}

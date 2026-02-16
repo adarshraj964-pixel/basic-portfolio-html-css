@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adarsh Raj | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Adarsh Raj</h1>
+
+        <h2 class="typing">
+            <span id="text"></span>
+        </h2>
+
+        <p class="about">
+            I am a Computer Science undergraduate pursuing B.Tech CSE. 
+            Passionate about software development, problem-solving, 
+            and building interactive web applications.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="mirror-btn">Projects</a>
+            <a href="#" class="mirror-btn">Contact</a>
+        </div>
+
+        <div class="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="skill">
+                <p>C Programming</p>
+                <div class="bar"><div class="progress c"></div></div>
+            </div>
+
+            <div class="skill">
+                <p>Python</p>
+                <div class="bar"><div class="progress python"></div></div>
+            </div>
+
+            <div class="skill">
+                <p>HTML / CSS</p>
+                <div class="bar"><div class="progress html"></div></div>
+            </div>
+
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="bar"><div class="progress js"></div></div>
+            </div>
+
+            <div class="skill">
+                <p>MySQL (Learning)</p>
+                <div class="bar"><div class="progress mysql"></div></div>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+    const words = ["B.Tech CSE Student", "Web Developer", "Programmer", "Tech Enthusiast"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+
+    function type() {
+        currentWord = words[i];
+        if (isDeleting) {
+            document.getElementById("text").textContent =
+                currentWord.substring(0, j--);
+        } else {
+            document.getElementById("text").textContent =
+                currentWord.substring(0, j++);
+        }
+
+        if (!isDeleting && j === currentWord.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+
+        if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+        }
+
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+
+    type();
+</script>
+
+</body>
+</html>
